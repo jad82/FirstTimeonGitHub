@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+* {
+  padding: 0;
+  margin: 0
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.top-background {
+  background-image: url(https://static.pexels.com/photos/235994/pexels-photo-235994.jpeg);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.extra-margins {
+  margin-left: 10%;
+  margin-right: 10%
+}
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+    margin: 0
+}
+.row:after {
+    clear: both;
+}
+header nav img {
+  padding: 10px 0;
+}
+header > nav ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+header > nav ul > li > a {
+  line-height: 50px;
+  color: #fff;
+  padding: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header > nav ul > li > a:hover {
+    color: #09bce4
+}
+.jumbotron {
+  justify-content: center;
+  align-items: center;
+}
+.bottom-line {
+  border-bottom: 1px solid white
+}
+.flex-centered {
+  display: flex;
+  justify-content: center;
+}
+.col-md-3, .col-xs-12 {
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
