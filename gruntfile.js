@@ -2,32 +2,32 @@ module.exports = function(grunt){
 //Projectconfiguration.
 grunt.initConfigsass({
 	sass:{
-	options:{
-		sourceMap:true
-			},
+		options:{
+			sourceMap:true
+				},
 		dist:{
 			files:{
-				'main.css':'main.sass'
-					}
-				}
-			},
+				'style.css':'style.sass'
+			}
+		}
+	},
 	imagemin:{
 		dynamic:{
 			files:[{expand:true,cwd:'images/',src:['**/*.{png,jpg,gif}'],dest:'images/build/'}]
 				}
 			}
+	watch:{
+		scripts:{
+			files:['sass/*.sass'],
+			tasks:['sass'],
+			options:{
+				spawn:false,
+				},
+		}
+	}
 });
 //Loadthepluginstasks.
 grunt.loadNpmTasks('grunt-sass');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 //Defaulttask(s).
 grunt.registerTask('default',['sass','imagemin']);};
-watch:{
-	scripts:{
-		files:['sass/*.sass'],
-		tasks:['sass'],
-		options:{
-			spawn:false,
-			},
-	}
-}
